@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Esquema de Tipos de Turismo</title>
+  <title>Tipos de Turismo en Argentina</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -40,7 +40,7 @@
     }
 
     main {
-      width: min(1100px, 100%);
+      width: min(1200px, 100%);
       background: var(--table-bg);
       border-radius: 16px;
       box-shadow: 0 15px 35px var(--shadow);
@@ -104,6 +104,14 @@
       margin-bottom: 0.5rem;
     }
 
+    .tourism-image {
+      width: 160px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.18);
+    }
+
     footer {
       margin-top: 2rem;
       font-size: 0.95rem;
@@ -111,7 +119,7 @@
       text-align: center;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       th,
       td {
         padding: 1rem 0.75rem;
@@ -120,148 +128,172 @@
       table {
         font-size: 0.95rem;
       }
+
+      .tourism-image {
+        width: 120px;
+        height: 90px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
+        width: 100%;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tbody tr {
+        margin-bottom: 2rem;
+        background: rgba(99, 179, 237, 0.08);
+        padding: 1.25rem;
+        border-radius: 12px;
+      }
+
+      tbody tr:nth-child(odd) {
+        background: rgba(43, 108, 176, 0.12);
+      }
+
+      td {
+        border-bottom: none;
+        padding: 0.75rem 0;
+      }
+
+      td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 700;
+        margin-bottom: 0.35rem;
+        color: var(--accent);
+      }
+
+      .tourism-image {
+        width: 100%;
+        height: auto;
+        margin-top: 0.75rem;
+      }
     }
   </style>
 </head>
 <body>
   <main>
     <header>
-      <h1>Esquema de Tipos de Turismo</h1>
+      <h1>Tipos de turismo en Argentina</h1>
       <p class="description">
-        Panorama de los principales tipos de turismo y las características que los distinguen, con ejemplos que
-        ilustran su aplicación alrededor del mundo.
+        2. Escribe un ejemplo de cada turismo con lugares de Argentina, detalla qué actividades se pueden realizar y añade una imagen representativa por tipo.
       </p>
     </header>
     <table>
       <thead>
         <tr>
           <th>Tipo de turismo</th>
-          <th>Características clave</th>
-          <th>Ejemplos típicos</th>
+          <th>Lugar recomendado en Argentina</th>
+          <th>Actividades destacadas</th>
+          <th>Imagen</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><span class="tag">Cultural</span></td>
-          <td>
-            Motivado por conocer patrimonio histórico, artístico y tradiciones locales; incluye visitas a museos,
-            sitios arqueológicos, festivales y gastronomía tradicional.
-          </td>
-          <td>Ruta de museos en París, circuito de pueblos mágicos en México.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Cultural</span></td>
+          <td data-label="Lugar recomendado en Argentina">Ciudad de Buenos Aires: barrios de San Telmo y Recoleta.</td>
+          <td data-label="Actividades destacadas">Visitar museos y teatros históricos, asistir a una milonga de tango, recorrer mercados de antigüedades.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1544984368-0a7f7fe3f6aa?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Vista nocturna del Obelisco en Buenos Aires" /></td>
         </tr>
         <tr>
-          <td><span class="tag">Natural o ecoturismo</span></td>
-          <td>
-            Se enfoca en ecosistemas naturales con actividades de bajo impacto ambiental, educación ambiental y apoyo
-            a comunidades locales.
-          </td>
-          <td>Avistamiento de aves en Costa Rica, recorridos por parques nacionales.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Natural o ecoturismo</span></td>
+          <td data-label="Lugar recomendado en Argentina">Parque Nacional Iguazú, Misiones.</td>
+          <td data-label="Actividades destacadas">Recorrer pasarelas sobre la selva misionera, navegar hasta la Garganta del Diablo, observar flora y fauna autóctona.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1599949223151-44b42dfa39ec?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Cataratas del Iguazú" /></td>
         </tr>
         <tr>
-          <td><span class="tag">Aventura</span></td>
-          <td>
-            Busca experiencias que involucran adrenalina y esfuerzo físico; requiere medidas de seguridad específicas y
-            guías especializados.
-          </td>
-          <td>Escalada en roca, rafting, parapente.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Aventura</span></td>
+          <td data-label="Lugar recomendado en Argentina">San Carlos de Bariloche, Río Negro.</td>
+          <td data-label="Actividades destacadas">Practicar rafting en el río Manso, hacer trekking en el Cerro Catedral, canopy entre bosques andinos.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Lagos y montañas en Bariloche" /></td>
         </tr>
         <tr>
-          <td><span class="tag">Rural o agroturismo</span></td>
-          <td>
-            Se desarrolla en zonas rurales; promueve la convivencia con comunidades campesinas y la participación en
-            labores agrícolas.
-          </td>
-          <td>Estancias en granjas, cosecha de uvas en viñedos.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Rural o agroturismo</span></td>
+          <td data-label="Lugar recomendado en Argentina">Estancias de los Esteros del Iberá, Corrientes.</td>
+          <td data-label="Actividades destacadas">Participar en tareas de campo, cabalgar entre esteros, degustar gastronomía regional con productos locales.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1519682577862-22b62b24e493?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Caballos en una estancia" /></td>
         </tr>
         <tr>
-          <td><span class="tag">Sol y playa</span></td>
-          <td>
-            Centrado en el disfrute recreativo de zonas costeras, con resorts, deportes acuáticos y entretenimiento
-            nocturno.
-          </td>
-          <td>Vacaciones en el Caribe, destinos mediterráneos.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Sol y playa</span></td>
+          <td data-label="Lugar recomendado en Argentina">Mar del Plata, Buenos Aires.</td>
+          <td data-label="Actividades destacadas">Disfrutar de balnearios y paradores, practicar surf y stand up paddle, recorrer la costanera en bicicleta.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Playa con olas" /></td>
         </tr>
         <tr>
-          <td><span class="tag">Negocios (MICE)</span></td>
-          <td>
-            Viajes motivados por reuniones, conferencias y eventos corporativos; demanda infraestructura para congresos y
-            servicios ejecutivos.
-          </td>
-          <td>Ferias comerciales en Barcelona, convenciones en Las Vegas.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Negocios (MICE)</span></td>
+          <td data-label="Lugar recomendado en Argentina">Puerto Madero y Microcentro, Ciudad de Buenos Aires.</td>
+          <td data-label="Actividades destacadas">Asistir a congresos en centros de convenciones, realizar rondas de negocios, visitar espacios de networking y gastronomía ejecutiva.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1505731132164-cca90383e1af?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Skyline moderno en Puerto Madero" /></td>
         </tr>
         <tr>
-          <td><span class="tag">Salud y bienestar</span></td>
-          <td>
-            Orientado a tratamientos médicos, terapias de spa, retiros de bienestar y medicina alternativa; busca mejorar
-            la salud física o emocional.
-          </td>
-          <td>Balnearios termales, clínicas especializadas en cirugía estética.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Salud y bienestar</span></td>
+          <td data-label="Lugar recomendado en Argentina">Termas de Río Hondo, Santiago del Estero.</td>
+          <td data-label="Actividades destacadas">Realizar baños termales, recibir tratamientos de spa y fangoterapia, participar en programas de relax integral.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Piscina termal con vapor" /></td>
         </tr>
         <tr>
-          <td><span class="tag">Gastronómico</span></td>
-          <td>
-            Prioriza la exploración culinaria regional, visitas a mercados y participación en talleres culinarios.
-          </td>
-          <td>Rutas del vino, festivales gastronómicos.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Gastronómico</span></td>
+          <td data-label="Lugar recomendado en Argentina">Ruta del Vino en Mendoza.</td>
+          <td data-label="Actividades destacadas">Realizar degustaciones en bodegas, participar en clases de cocina regional, recorrer viñedos en bicicleta.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Viñedos en Mendoza" /></td>
         </tr>
         <tr>
-          <td><span class="tag">Religioso o espiritual</span></td>
-          <td>
-            Relacionado con peregrinaciones, visitas a santuarios y retiros espirituales; suele seguir calendarios
-            litúrgicos.
-          </td>
-          <td>Camino de Santiago, peregrinación a La Meca.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Religioso o espiritual</span></td>
+          <td data-label="Lugar recomendado en Argentina">Basílica de Luján, provincia de Buenos Aires.</td>
+          <td data-label="Actividades destacadas">Participar en peregrinaciones, visitar el museo de los milagros, asistir a misas y retiros espirituales.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1605568425174-1b7466a39aea?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Basílica de Luján" /></td>
         </tr>
         <tr>
-          <td><span class="tag">Educativo</span></td>
-          <td>
-            Incluye viajes académicos, intercambios y cursos cortos; puede implicar prácticas profesionales o
-            voluntariados.
-          </td>
-          <td>Programas de estudio en el extranjero, campamentos científicos.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Educativo</span></td>
+          <td data-label="Lugar recomendado en Argentina">Ciudad de La Plata, Provincia de Buenos Aires.</td>
+          <td data-label="Actividades destacadas">Realizar visitas guiadas al Museo de Ciencias Naturales, asistir a talleres en la UNLP, recorrer el planetario y centros de investigación.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Estudiantes trabajando en equipo" /></td>
         </tr>
         <tr>
-          <td><span class="tag">Deportivo</span></td>
-          <td>
-            Movido por la participación o asistencia a eventos deportivos; necesita infraestructura específica y
-            logística para espectadores.
-          </td>
-          <td>Copas mundiales, maratones internacionales.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Deportivo</span></td>
+          <td data-label="Lugar recomendado en Argentina">Buenos Aires durante el Maratón Internacional.</td>
+          <td data-label="Actividades destacadas">Competir o alentar en el maratón, realizar tours por estadios emblemáticos, practicar running en los bosques de Palermo.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Corredores en una carrera" /></td>
         </tr>
         <tr>
-          <td><span class="tag">Compras</span></td>
-          <td>
-            Motivado por adquirir productos específicos o de lujo; depende de zonas comerciales y estrategias libres de
-            impuestos.
-          </td>
-          <td>Viajes a outlets, zonas duty free.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Compras</span></td>
+          <td data-label="Lugar recomendado en Argentina">Galerías Pacífico y la Avenida Santa Fe, Ciudad de Buenos Aires.</td>
+          <td data-label="Actividades destacadas">Comprar productos de diseño argentino, aprovechar beneficios tax-free, visitar ferias de artesanías y mercados de diseño.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Interior de un centro comercial" /></td>
         </tr>
         <tr>
-          <td><span class="tag">LGBT+</span></td>
-          <td>
-            Enfocado en destinos inclusivos con servicios adaptados y eventos temáticos; es relevante la seguridad y la
-            aceptación social.
-          </td>
-          <td>Pride parades, destinos queer-friendly.</td>
+          <td data-label="Tipo de turismo"><span class="tag">LGBT+</span></td>
+          <td data-label="Lugar recomendado en Argentina">Barrio de Palermo, Ciudad de Buenos Aires.</td>
+          <td data-label="Actividades destacadas">Asistir a la Marcha del Orgullo, disfrutar de bares y clubes inclusivos, recorrer circuitos culturales queer-friendly.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1492691527719-0369a794ec0f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Bandera arcoíris ondeando en una multitud" /></td>
         </tr>
         <tr>
-          <td><span class="tag">Solidario/voluntariado</span></td>
-          <td>
-            Combina el viaje con apoyo social o ambiental; suele coordinarse con ONG o proyectos comunitarios.
-          </td>
-          <td>Programas de reconstrucción, voluntariado en reservas naturales.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Solidario / voluntariado</span></td>
+          <td data-label="Lugar recomendado en Argentina">Comunidades rurales del Impenetrable Chaqueño.</td>
+          <td data-label="Actividades destacadas">Participar en proyectos de construcción comunitaria, apoyar huertas agroecológicas, colaborar en talleres educativos para niños.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1531853121101-ecdfb1858dd1?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Voluntarios trabajando juntos" /></td>
         </tr>
         <tr>
-          <td><span class="tag">Cinematográfico</span></td>
-          <td>
-            Atraído por localizaciones de películas o series; ofrece tours temáticos y eventos asociados.
-          </td>
-          <td>Recorridos por escenarios de "Game of Thrones", Hollywood tours.</td>
+          <td data-label="Tipo de turismo"><span class="tag">Cinematográfico</span></td>
+          <td data-label="Lugar recomendado en Argentina">Quebrada de Humahuaca, Jujuy.</td>
+          <td data-label="Actividades destacadas">Recorrer locaciones de filmaciones reconocidas, participar en festivales de cine regional, fotografiar paisajes escénicos multicolores.</td>
+          <td data-label="Imagen"><img class="tourism-image" src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Montañas coloridas en la Quebrada de Humahuaca" /></td>
         </tr>
       </tbody>
     </table>
     <footer>
-      La clasificación puede superponerse entre categorías según el contexto y la oferta turística específica.
+      La clasificación puede superponerse entre categorías según el contexto y la oferta turística específica dentro del país.
     </footer>
   </main>
 </body>
