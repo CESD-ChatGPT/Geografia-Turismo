@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esquema de Tipos de Turismo</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5f5f5;
+      --text: #222;
+      --accent: #2b6cb0;
+      --table-bg: #ffffff;
+      --border: #cbd5e0;
+      --shadow: rgba(0, 0, 0, 0.08);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --text: #f8fafc;
+        --accent: #60a5fa;
+        --table-bg: #1e293b;
+        --border: #334155;
+        --shadow: rgba(15, 23, 42, 0.45);
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 3rem 1rem;
+    }
+
+    main {
+      width: min(1100px, 100%);
+      background: var(--table-bg);
+      border-radius: 16px;
+      box-shadow: 0 15px 35px var(--shadow);
+      padding: clamp(1.5rem, 2vw + 1rem, 3rem);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(2rem, 3vw + 1rem, 3.25rem);
+      color: var(--accent);
+    }
+
+    p.description {
+      margin: 0 auto;
+      max-width: 70ch;
+      font-size: 1.05rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2.5rem;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    thead {
+      background: linear-gradient(135deg, rgba(43, 108, 176, 0.9), rgba(99, 179, 237, 0.85));
+      color: #f7fafc;
+    }
+
+    th,
+    td {
+      padding: 1.25rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    tbody tr:nth-child(odd) {
+      background: rgba(99, 179, 237, 0.08);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(43, 108, 176, 0.12);
+      color: var(--accent);
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: #64748b;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      th,
+      td {
+        padding: 1rem 0.75rem;
+      }
+
+      table {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Esquema de Tipos de Turismo</h1>
+      <p class="description">
+        Panorama de los principales tipos de turismo y las características que los distinguen, con ejemplos que
+        ilustran su aplicación alrededor del mundo.
+      </p>
+    </header>
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de turismo</th>
+          <th>Características clave</th>
+          <th>Ejemplos típicos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag">Cultural</span></td>
+          <td>
+            Motivado por conocer patrimonio histórico, artístico y tradiciones locales; incluye visitas a museos,
+            sitios arqueológicos, festivales y gastronomía tradicional.
+          </td>
+          <td>Ruta de museos en París, circuito de pueblos mágicos en México.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Natural o ecoturismo</span></td>
+          <td>
+            Se enfoca en ecosistemas naturales con actividades de bajo impacto ambiental, educación ambiental y apoyo
+            a comunidades locales.
+          </td>
+          <td>Avistamiento de aves en Costa Rica, recorridos por parques nacionales.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Aventura</span></td>
+          <td>
+            Busca experiencias que involucran adrenalina y esfuerzo físico; requiere medidas de seguridad específicas y
+            guías especializados.
+          </td>
+          <td>Escalada en roca, rafting, parapente.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Rural o agroturismo</span></td>
+          <td>
+            Se desarrolla en zonas rurales; promueve la convivencia con comunidades campesinas y la participación en
+            labores agrícolas.
+          </td>
+          <td>Estancias en granjas, cosecha de uvas en viñedos.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Sol y playa</span></td>
+          <td>
+            Centrado en el disfrute recreativo de zonas costeras, con resorts, deportes acuáticos y entretenimiento
+            nocturno.
+          </td>
+          <td>Vacaciones en el Caribe, destinos mediterráneos.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Negocios (MICE)</span></td>
+          <td>
+            Viajes motivados por reuniones, conferencias y eventos corporativos; demanda infraestructura para congresos y
+            servicios ejecutivos.
+          </td>
+          <td>Ferias comerciales en Barcelona, convenciones en Las Vegas.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Salud y bienestar</span></td>
+          <td>
+            Orientado a tratamientos médicos, terapias de spa, retiros de bienestar y medicina alternativa; busca mejorar
+            la salud física o emocional.
+          </td>
+          <td>Balnearios termales, clínicas especializadas en cirugía estética.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Gastronómico</span></td>
+          <td>
+            Prioriza la exploración culinaria regional, visitas a mercados y participación en talleres culinarios.
+          </td>
+          <td>Rutas del vino, festivales gastronómicos.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Religioso o espiritual</span></td>
+          <td>
+            Relacionado con peregrinaciones, visitas a santuarios y retiros espirituales; suele seguir calendarios
+            litúrgicos.
+          </td>
+          <td>Camino de Santiago, peregrinación a La Meca.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Educativo</span></td>
+          <td>
+            Incluye viajes académicos, intercambios y cursos cortos; puede implicar prácticas profesionales o
+            voluntariados.
+          </td>
+          <td>Programas de estudio en el extranjero, campamentos científicos.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Deportivo</span></td>
+          <td>
+            Movido por la participación o asistencia a eventos deportivos; necesita infraestructura específica y
+            logística para espectadores.
+          </td>
+          <td>Copas mundiales, maratones internacionales.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Compras</span></td>
+          <td>
+            Motivado por adquirir productos específicos o de lujo; depende de zonas comerciales y estrategias libres de
+            impuestos.
+          </td>
+          <td>Viajes a outlets, zonas duty free.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">LGBT+</span></td>
+          <td>
+            Enfocado en destinos inclusivos con servicios adaptados y eventos temáticos; es relevante la seguridad y la
+            aceptación social.
+          </td>
+          <td>Pride parades, destinos queer-friendly.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Solidario/voluntariado</span></td>
+          <td>
+            Combina el viaje con apoyo social o ambiental; suele coordinarse con ONG o proyectos comunitarios.
+          </td>
+          <td>Programas de reconstrucción, voluntariado en reservas naturales.</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Cinematográfico</span></td>
+          <td>
+            Atraído por localizaciones de películas o series; ofrece tours temáticos y eventos asociados.
+          </td>
+          <td>Recorridos por escenarios de "Game of Thrones", Hollywood tours.</td>
+        </tr>
+      </tbody>
+    </table>
+    <footer>
+      La clasificación puede superponerse entre categorías según el contexto y la oferta turística específica.
+    </footer>
+  </main>
+</body>
+</html>
